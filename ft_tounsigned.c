@@ -6,25 +6,19 @@
 /*   By: yed-dyb <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 11:48:13 by yed-dyb           #+#    #+#             */
-/*   Updated: 2021/11/13 11:49:45 by yed-dyb          ###   ########.fr       */
+/*   Updated: 2021/11/13 14:38:02 by yed-dyb          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_tounsigned(unsigned int nb)
-{
-	//long int	nbr;
+#include "ft_printf.h"
 
-	//nbr = nb;
-	/*if (nbr < 0)
-	{
-		nbr *= -1;
-		ft_putchar('-');
-	}*/
+void	ft_tounsigned(unsigned int nb, int *count)
+{
 	if (nb >= 10)
 	{
-		ft_putnbr(nb / 10);
-		ft_putnbr(nb % 10);
+		ft_putnbr(nb / 10, count);
+		ft_putnbr(nb % 10, count);
 	}
 	else
-		ft_putchar(nb + 48);
+		ft_putchar(nb + 48, count);
 }
